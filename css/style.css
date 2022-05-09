@@ -1,0 +1,405 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.parallax {
+  background-image: url('../assets/images/cryptoBackground4.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+#main-html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* loader / spinner */
+.main-page-loader {
+  margin: auto;
+  width: 600px;
+  height: 600px;
+}
+
+header {
+  background-image: url('../assets/images/cryptoBackground4.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  color: #ffffff;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h1 {
+  text-align: center;
+  color: #5797d3;
+  font-weight: bolder;
+}
+
+header h1 span {
+  font-weight: lighter;
+  font-size: 80%;
+  color: #ff6ec767;
+}
+
+header h1:hover {
+  cursor: pointer;
+}
+.my-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlink:hover {
+  color: #ff6ec7;
+}
+
+.search {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  z-index: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6ec767;
+}
+
+.search input {
+  height: 33px;
+  width: 400px;
+  border-radius: 10px 0;
+  padding: 3px;
+}
+
+/* main-page */
+#main-container {
+  display: none;
+  margin: 20px;
+  padding-bottom: 70px;
+  position: absolute;
+  top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#error-container {
+  margin: 20px;
+  position: absolute;
+  top: 200px;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+
+/* about-page */
+#about-container {
+  margin-top: 300px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+}
+.main-about {
+  padding: 10px;
+  background-color: rgb(32, 32, 32, 0.5);
+  box-shadow: 0px 10px 15px 5px rgb(10, 2, 10);
+  border: #ff6ec767 solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.image-about {
+  margin: 10px;
+  padding: 10px;
+  width: 40%;
+  min-width: 200px;
+  max-width: 800px;
+}
+.text-about {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.name-about,
+.description-about {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+/* cards of coins */
+.cardi-container {
+  color: white;
+  background-color: rgb(32, 32, 32, 0.5);
+  box-shadow: 0px 10px 15px 5px rgb(10, 2, 10);
+
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 30px 0px;
+  position: relative;
+}
+.cardi-header {
+  display: flex;
+}
+.cardi-header-title {
+  width: 70%;
+  margin: 2px;
+}
+.cardi-title {
+  font-weight: bolder;
+}
+.cardi-header-toggle {
+  margin: 2px;
+  width: 26%;
+}
+.cardi-details {
+  border: 1px solid #ff6ec767;
+  border-radius: 10px 0;
+  padding: 0 10px;
+}
+.cardi-bottom {
+  width: 100%;
+  padding: 10px 0;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cardi-button {
+  margin: 0px 5px;
+  height: 30px;
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  width: 100px;
+  background: rgb(80, 80, 80);
+  border: 1px solid #ff6ec767;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 4px 6px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 16px;
+  min-height: 30px;
+  outline: 0;
+  padding: 3px 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.cardi-button:hover,
+.cardi-button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff6ec7;
+}
+.cardi-button:active {
+  opacity: 0.5;
+}
+
+/* more info */
+.more-coin-data {
+  color: white;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.imageInfo {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+}
+.more-info-p {
+  margin: 6px;
+  color: rgb(255, 255, 255);
+  font-weight: 100;
+}
+
+/* switch - box around the slider */
+.switchi {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* switch - hide checkbox */
+.switchi input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* switch - slider */
+.slideri {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff6ec77a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slideri:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(53, 53, 53);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slideri {
+  background-color: white;
+}
+input:checked + .slideri:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* modal - over 5 selected coins */
+.modal-container {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  transition: opacity 0.8s ease;
+}
+.modal-box {
+  color: rgb(255, 255, 255);
+  background-color: rgb(32, 32, 32);
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  border-radius: 30px;
+  box-shadow: 0 0 20px white;
+  z-index: 1;
+  opacity: 0.8;
+}
+.modal-header {
+  padding: 0 30px;
+  color: rgb(32, 32, 32);
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-close-button {
+  position: absolute;
+  /* width: 100px; */
+  height: 20px;
+  right: 15px;
+  top: 15px;
+}
+.modal-close-button:hover {
+  height: 23px;
+  right: 14px;
+  top: 14px;
+  cursor: pointer;
+}
+
+#modal-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+  overflow-wrap: break-word;
+}
+.modal-coin-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 60%;
+  height: px;
+  padding: 10px;
+}
+
+/* chart-page */
+#chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 300px;
+  border: #ff6ec767 solid 1px;
+}
+
+.my-chart-report {
+  background-color: rgb(32, 32, 32, 0.5);
+  box-shadow: 0px 10px 15px 5px rgb(10, 2, 10);
+  border: #ff6ec767 solid 1px;
+  width: 70vw;
+  height: 40vh;
+}
+
+.chart-error {
+  color: #ff6ec7;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer */
+footer {
+  background-image: url('../assets/images/cryptoBackground4.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: bolder;
+}
